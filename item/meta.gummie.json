@@ -1,0 +1,14 @@
+{
+    "title": "HDMI cables",
+    "price": {
+        "amount": 4,
+        "type": "FIXED"
+    },
+    "condition": "new",
+    "description_file": "desc.txt",
+    "category": "TV Accessories",
+    "images": [
+        "img01.jpg",
+        "img02.jpg"
+    ]
+}

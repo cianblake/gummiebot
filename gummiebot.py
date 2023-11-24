@@ -190,23 +190,24 @@ class GummieBot:
             'price.amount': ad.price['amount'],
             'price.type': ad.price['type']
         }
+        print(inputs)
+    # Process input fields from the form
         for input_tag in inputs:
             if 'name' not in input_tag:
                 continue
             if input_tag['name'] in submission:
-                # do not override our values
-                pass
+                # Skip fields we've already set
+                continue
+            elif input_tag.get('type') == 'radio':
+                # For radio buttons, set the value based on the ad's condition
+                if 'condition' in input_tag['name']:
+                    if ad.condition == 'new':
+                        submission[input_tag['name']] = 'new'  # or the appropriate value for 'new'
+                    elif ad.condition == 'used':
+                        submission[input_tag['name']] = 'used'  # or the appropriate value for 'used'
             else:
-                if input_tag.get('type') == 'checkbox':
-                    pass
-                else:
-                    submission[input_tag['name']] = input_tag.get('value', '')
-                    if 'condition' in input_tag['name']:
-                        condition_field_name = input_tag['name']
-        if condition_field_name is False:
-            raise RuntimeError('Could not extract field name'
-                               ' for item condition using known method')
-        submission[condition_field_name] = ad.condition
+                # For other fields, just copy the value
+                submission[input_tag['name']] = input_tag.get('value', '')
 
         image_links = []
         log('Uploading images...')
@@ -227,6 +228,9 @@ class GummieBot:
 
         # post a draft in case the actual submission fails
         # to make it easier for human to post
+        
+        print(submission)
+
         self.session.post('draft',
                           self.BASE_URL + DRAFT_TARGET,
                           data=submission)

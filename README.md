@@ -122,3 +122,101 @@ Delete an ad by its ID. The ad ID can be acquired by first reading `.ads`. Retur
 #### `.post_ad(ad: GumtreeListing) -> bool`
 
 Posts an instance of `GumtreeListing` to Gumtree. Returns boolean indicating success or failure.
+
+{'description': 'HMDI Cables in perfect condition.', 'price.amount': 4.0, 'price.type': 'FIXED', 'images': ['https://gumtreeau-res.cloudinary.com/image/private/t_$_74/gumtree/9f23e44c-3698-44b6-ae25-e7766379fae3.jpg', 'https://gumtreeau-res.cloudinary.com/image/private/t_$_74/gumtree/ec25351b-d0d9-453a-86a7-479811ea4585.jpg']}
+
+
+[
+    {
+        "id": "20046_TEXT_FIELD_ad_title",
+        "componentType": "TEXT_FIELD",
+        "name": "title",
+        "value": "hdmi cables"
+    },
+    {
+        "id": "20046_CATEGORY_FIELD_ad_category",
+        "componentType": "CATEGORY_FIELD",
+        "name": "level2CategoryId",
+        "value": "20046"
+    },
+    {
+        "id": "20046_PRICE_FIELD_ad_price",
+        "componentType": "PRICE_FIELD",
+        "name": "price",
+        "value": {
+            "priceType": "FREE"
+        }
+    },
+    {
+        "id": "20046_SINGLE_SELECTION_FIELD_AD_TYPE",
+        "componentType": "SINGLE_SELECTION_FIELD",
+        "name": "adType",
+        "value": "OFFER"
+    },
+    {
+        "id": "20046_TEXT_AREA_ad_description",
+        "componentType": "TEXT_AREA",
+        "name": "description",
+        "value": "HDMI Cables HDMI Cables HDMI Cables HDMI Cables"
+    },
+    {
+        "id": "20046_BOOLEAN_FIELD_offer_shipping",
+        "componentType": "BOOLEAN_FIELD",
+        "name": "offerShipping",
+        "value": false
+    },
+    {
+        "id": "20046_SINGLE_SELECTION_FIELD_electronics_computers_other.condition_s",
+        "componentType": "SINGLE_SELECTION_FIELD",
+        "name": "attributeMap[electronics_computers_other.condition_s]",
+        "value": "new"
+    },
+    {
+        "id": "20046_TEXT_FIELD_contact_name",
+        "componentType": "TEXT_FIELD",
+        "name": "contactName",
+        "value": "Cian"
+    },
+    {
+        "id": "20046_LOCATION_FIELD_contact_location",
+        "componentType": "LOCATION_FIELD",
+        "name": "mapAddress",
+        "value": {
+            "mapAddress": "Australia",
+            "locationId": "0",
+            "longitude": 133.77513,
+            "latitude": -25.27439,
+            "confidenceLevel": "INVALID",
+            "streetName": "",
+            "houseNumber": "",
+            "postcode": "",
+            "localityName": "Australia",
+            "showLocationOnMap": "false"
+        }
+    },
+    {
+        "id": "20046_TEXT_FIELD_phone_number",
+        "componentType": "TEXT_FIELD",
+        "name": "phoneNumber",
+        "value": ""
+    },
+    {
+        "id": "20046_BOOLEAN_FIELD_phone_number",
+        "componentType": "BOOLEAN_FIELD",
+        "name": "showPhoneOnVip",
+        "value": false
+    },
+    {
+        "id": "20046_TEXT_FIELD_link_website",
+        "componentType": "TEXT_FIELD",
+        "name": "website",
+        "value": "",
+        "featureType": "AD_PAID_URL"
+    },
+    {
+        "id": "20046_BUNDLE_SELECTION_bundle_selection",
+        "componentType": "BUNDLE_SELECTION",
+        "name": "bundleSelection",
+        "value": "PACKAGE_0"
+    }
+]
